@@ -6,7 +6,6 @@ This Python script processes **SRA metadata files in `.csv` format** and automat
 
 ## 📁 Input files
 
-### Required input
 - **Metadata `.csv` file**
   - Selected by the user through a graphical file explorer.
   - Must contain at least the following columns:
