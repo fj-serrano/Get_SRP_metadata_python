@@ -104,7 +104,7 @@ These steps ensure clean, uniform, and pipeline-friendly identifiers.
 
 - The user specifies additional columns to include. Only existing columns are included.  
 - The DataFrame is exported to a tab-separated `.tsv` file including the fixed and selected columns.  
-- The output is saved with the filename based on the first value in the `SRA Study` column.
+- The output is saved with the filename based on the `SRA Study`.
 
 ---
 
