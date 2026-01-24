@@ -87,7 +87,7 @@ The script is divided into three main stages:
 ### 1️⃣ File selection and loading
 
 - A file explorer is launched using `tkinter`.  
-- The selected `.csv` file is read into a `pandas` DataFrame.  
+- The selected `.csv` file is read into a `pandas DataFrame`.  
 - File paths are normalized to avoid compatibility issues.
 
 ### 2️⃣ Data preprocessing
