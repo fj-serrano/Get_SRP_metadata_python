@@ -1,10 +1,10 @@
-# 📄 SRA Metadata Table Generator (Python)
+# SRA Metadata Table Generator (Python)
 
 This Python script processes **SRA metadata files in `.csv` format** and automatically generates a **clean, formatted `.tsv` table**. The output is designed to be directly usable in downstream bioinformatics pipelines, ensuring consistent naming and structure.
 
 ---
 
-## 📁 Input files
+## Input files
 
 - **Metadata `.csv` file**
   - Selected by the user through a graphical file explorer.
@@ -15,7 +15,7 @@ This Python script processes **SRA metadata files in `.csv` format** and automat
 
 ---
 
-## ⚙️ Requirements
+## Requirements
 
 - **Python 3**
 - Required libraries:
@@ -26,7 +26,7 @@ No additional external dependencies are required.
 
 ---
 
-## ▶️ Script usage
+## Script usage
 
 Run the script from the terminal or a Python environment:
 
@@ -35,7 +35,7 @@ python Get_SRP_metadata_python.py
 ````
 
 ---
-## 🔀 Execution workflow
+## Execution workflow
 
 1. A **graphical file dialog** opens, allowing the user to select the input `.csv` metadata file.  
 2. The script prints **all available column names** to the terminal.  
@@ -45,7 +45,7 @@ python Get_SRP_metadata_python.py
 
 ---
 
-## 🧑‍💻 User interaction
+## User interaction
 
 - File selection is performed via a **Tkinter graphical interface**.  
 - Column selection is done through **standard input (command line)**.  
@@ -54,7 +54,7 @@ python Get_SRP_metadata_python.py
 
 ---
 
-## 📤 Output
+## Output
 
 The script generates a single output file:
 
@@ -71,7 +71,7 @@ The script generates a single output file:
 
 ---
 
-### 🛠️ Data processing applied
+### Data processing applied
 
 - A new column `file` is created automatically by appending `.fa.gz` to each `Experiment` value.  
 - The original column `Experiment` is renamed to `name`.  
@@ -80,17 +80,17 @@ The script generates a single output file:
 
 ---
 
-## 🔍 How the script works
+## How the script works
 
 The script is divided into three main stages:
 
-### 1️⃣ File selection and loading
+### 1️. File selection and loading
 
 - A file explorer is launched using `tkinter`.  
 - The selected `.csv` file is read into a `pandas DataFrame`.  
 - File paths are normalized to avoid compatibility issues.
 
-### 2️⃣ Data preprocessing
+### 2️. Data preprocessing
 
 - Creation of the `file` column with `<Experiment>.fa.gz` entries.  
 - Renaming of the `Experiment` column to `name`.  
@@ -99,7 +99,7 @@ The script is divided into three main stages:
 
 These steps ensure clean, uniform, and pipeline-friendly identifiers.
 
-### 3️⃣ Output table generation
+### 3️. Output table generation
 
 - The user specifies additional columns to include. Only existing columns are included.  
 - The DataFrame is exported to a tab-separated `.tsv` file including the fixed and selected columns.  
@@ -107,7 +107,7 @@ These steps ensure clean, uniform, and pipeline-friendly identifiers.
 
 ---
 
-## 🧠 Implementation details
+## Implementation details
 
 - Data is handled using a `pandas DataFrame`.  
 - The output table columns include fixed and user-selected columns.  
@@ -116,7 +116,7 @@ These steps ensure clean, uniform, and pipeline-friendly identifiers.
 
 ---
 
-## 📌 Notes
+## Notes
 
 - The input `.csv` file must be correctly formatted.  
 - User-specified columns that do not exist in the input are ignored.  
